@@ -19,6 +19,14 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Activerecord-Import is a library for bulk inserting data using ActiveRecord.
 gem 'activerecord-import'
+# Slim is a lightweight templating engine for Ruby
+gem 'slim-rails'
+# Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
+gem 'bootstrap', '~> 4.4.1'
+# Provides Sprockets implementation for Rails 4.x (and beyond) Asset Pipeline.
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+# jQuery for Rails.
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -54,3 +62,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "pg", "~> 1.2"
