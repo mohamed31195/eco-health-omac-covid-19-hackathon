@@ -1,0 +1,12 @@
+.container-fluid
+  .container-md
+    .h4
+      | Welcome to ECO-HEALTH
+    .h3
+      | We aim to create a balance between health and economy in order to have a healthy and sustainable world.
+    .container-sm
+      .row
+        .col        
+          = link_to "Collected Data", patients_show_path, class: "btn btn-light btn-lg btn-block", style: ('background-color: transparent; border-color: white; color: white; font-weight: bold; border-radius: 10px;')
+        .col  
+          = link_to "Import Data", patients_file_import_path, class: "btn btn-light btn-lg btn-block", style: ('background-color: transparent; border-color: white; color: white; font-weight: bold; border-radius: 10px;')

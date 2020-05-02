@@ -1,0 +1,43 @@
+.container-fluid
+  .row
+    .col        
+        = link_to "Home", patients_index_path, class: "btn btn-light btn-lg btn-block", style: ('background-color: transparent; border-color: white; color: white; font-weight: bold; border-radius: 10px;')
+    .col  
+        = link_to "Import Data", patients_file_import_path, class: "btn btn-light btn-lg btn-block", style: ('background-color: transparent; border-color: white; color: white; font-weight: bold; border-radius: 10px;')
+  table.table.table-striped.table-hover.table-dark
+    thead.thead-light
+      tr
+        th
+          | Gender
+        th
+          | Age
+        th
+          | Occupation
+        th
+          | Country
+        th
+          | City
+        th
+          | Health Status
+    tbody.tbody-light
+      - @patients.each do |patient|
+        tr
+          td
+            = patient.gender
+          td
+            = patient.age
+          td
+            = patient.occupation
+          td
+            = patient.country
+          td
+            = patient.city
+          td
+            = patient.health_status
+
+css:
+    .table-dark {        
+        opacity: 0.9;
+        padding-right: 50px;
+    }
+
