@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    title
+      | EcoHealth
+    .h1
+      | ECO-HEALTH
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    css:
+      body {
+      height: 100%;
+      background: linear-gradient(rgba(6,6,6,0.4),rgba(0,0,0, 0.7)) no-repeat center center fixed, 
+                      url('/assets/background.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      }
+
+      .h1 {
+        color: white;
+        padding: 1%;
+      }
+      
+      .h2 {
+        color: brown;
+        font-size: 60px;
+        padding-bottom: 10%;
+      }
+
+      .h3 {
+        font-size: 60px;
+        font-weight: bold;
+        color: white;
+      }
+
+      .h4 {
+        color: brown;
+      }
+
+      .h6 {
+        color: darkGreen;
+        text-align: center;
+      }
+
+      .container-fluid {
+        margin-top: 10%;
+      }
+
+      .btn-block:hover {
+        background: linear-gradient(rgba(6,6,6,0.4),rgba(0,0,0, 0.7)) !important;
+      }
+
+      .col {
+        margin-bottom: 3%;
+      }
+  
+  body
+    = yield
