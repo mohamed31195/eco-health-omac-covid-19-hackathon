@@ -27,6 +27,10 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 # jQuery for Rails.
 gem 'jquery-rails'
+# Simple Form aims to be as flexible as possible while helping you with powerful components to create your forms.
+gem 'simple_form'
+# A runtime developer console and IRB alternative with powerful introspection capabilities. http://pry.github.com
+gem 'pry'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
