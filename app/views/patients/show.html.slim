@@ -4,36 +4,128 @@
         = link_to "Home", patients_index_path, class: "btn btn-light btn-lg btn-block", style: ('background-color: transparent; border-color: white; color: white; font-weight: bold; border-radius: 10px;')
     .col  
         = link_to "Import Data", patients_file_import_path, class: "btn btn-light btn-lg btn-block", style: ('background-color: transparent; border-color: white; color: white; font-weight: bold; border-radius: 10px;')
+    .col  
+        = link_to "Fill Form", patients_new_path, class: "btn btn-light btn-lg btn-block", style: ('background-color: transparent; border-color: white; color: white; font-weight: bold; border-radius: 10px;')
+  = flash[:notice]
   table.table.table-striped.table-hover.table-dark
     thead.thead-light
       tr
         th
-          | Gender
-        th
           | Age
         th
-          | Occupation
+          | Gender
         th
-          | Country
+          | Employment Status
         th
-          | City
+          | Construction
         th
-          | Health Status
+          | Delivering To Home
+        th
+          | Food Retail
+        th
+          | Healthcare
+        th
+          | Logistic
+        th
+          | Manufacturing
+        th
+          | Policing Or Prison
+        th
+          | Public Transport
+        th
+          | School
+        th
+          | Social Care
+        th
+          | Not Working
+        th
+          | Arthritis
+        th
+          | Asthma
+        th
+          | Cancer
+        th
+          | Cystic Fibrosis
+        th
+          | Chronic Obstructive Pulmonary Disease
+        th
+          | Diabetes
+        th
+          | Epilepsy
+        th
+          | Heart Disease
+        th
+          | High Blood Pressure
+        th
+          | High Cholesterol
+        th
+          | HIV
+        th
+          | Mental Health Condition
+        th
+          | Multiple Scierosis
+        th
+          | None
+
     tbody.tbody-light
       - @patients.each do |patient|
         tr
           td
-            = patient.gender
-          td
             = patient.age
           td
-            = patient.occupation
+            = patient.gender
           td
-            = patient.country
+            = patient.employment_status
           td
-            = patient.city
+            = patient.construction
           td
-            = patient.health_status
+            = patient.delivering_to_home
+          td
+            = patient.food_retail
+          td
+            = patient.healthcare
+          td
+            = patient.logistic
+          td
+            = patient.manufacturing
+          td
+            = patient.policing_or_prison
+          td
+            = patient.public_transport
+          td
+            = patient.school
+          td
+            = patient.social_care
+          td
+            = patient.not_working
+          td
+            = patient.arthritis
+          td
+            = patient.asthma
+          td
+            = patient.cancer
+          td
+            = patient.cystic_fibrosis
+          td
+            = patient.chronic_obstructive_pulmonary_disease
+          td
+            = patient.diabetes
+          td
+            = patient.epilepsy
+          td
+            = patient.heart_disease
+          td
+            = patient.high_blood_pressure
+          td
+            = patient.high_cholesterol
+          td
+            = patient.hiv
+          td
+            = patient.mental_health_condition
+          td
+            = patient.multiple_scierosis
+          td
+            = patient.none
 
 css:
     .table-dark {        

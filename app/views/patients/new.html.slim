@@ -1,0 +1,31 @@
+.container-fluid
+  .row
+    .col        
+        = link_to "Home", patients_index_path, class: "btn btn-light btn-lg btn-block", style: ('background-color: transparent; border-color: white; color: white; font-weight: bold; border-radius: 10px;')
+    .col  
+        = link_to "Import Data", patients_file_import_path, class: "btn btn-light btn-lg btn-block", style: ('background-color: transparent; border-color: white; color: white; font-weight: bold; border-radius: 10px;')
+    .col  
+        = link_to "Collected Data", patients_show_path, class: "btn btn-light btn-lg btn-block", style: ('background-color: transparent; border-color: white; color: white; font-weight: bold; border-radius: 10px;')
+  .container-md
+    .col-sm
+    .form-group
+        = render "form"
+
+css:
+  .col-sm {
+    text-align: center;
+  }
+
+  .form-group {
+      padding: 2%;
+      color: white;
+    text-align: left;
+  }
+
+  label {
+      padding-right: 10px;
+  }
+
+  .container-md {
+      background: rgba(0,0,0,0.5);
+  }
