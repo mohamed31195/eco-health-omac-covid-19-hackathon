@@ -3,8 +3,8 @@ html
   head
     title
       | EcoHealth
-    .h1
-      | ECO-HEALTH
+    = favicon_link_tag asset_path('logo.png')
+    <img src="assets/logo.png" alt="LOGO">
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -20,6 +20,10 @@ html
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      }
+
+      img {
+        height: 100px;
       }
 
       .h1 {
