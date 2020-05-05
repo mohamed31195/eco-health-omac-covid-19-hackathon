@@ -1,50 +1,85 @@
 .container
-    .col-form-label
-        = simple_form_for @patient do |f|
-            = f.input :age, label: 'Age'
-            = f.input :gender, label: 'Gender', collection: Patient.genders.keys
-            = f.input :employment_status, label: 'Employment Status', collection: Patient.employment_statuses.keys
-            = f.input :construction, label: 'Construction', collection: Patient.constructions.keys
-            = f.input :delivering_to_home, label: 'Delivering to Home', collection: Patient.delivering_to_homes.keys
-            = f.input :food_retail, label: 'Food Retail', collection: Patient.food_retails.keys
-            = f.input :healthcare, label: 'Healthcare', collection: Patient.healthcares.keys
-            = f.input :logistic, label: 'Logistic', collection: Patient.logistics.keys
-            = f.input :manufacturing, label: 'Manufacturing', collection: Patient.manufacturings.keys
-            = f.input :policing_or_prison, label: 'Policing or Prison', collection: Patient.policing_or_prisons.keys
-            = f.input :public_transport, label: 'Public Transport', collection: Patient.public_transports.keys
-            = f.input :school, label: 'School', collection: Patient.schools.keys
-            = f.input :social_care, label: 'Social Care', collection: Patient.social_cares.keys
-            = f.input :not_working, label: 'Not Working', collection: Patient.not_workings.keys
-            = f.input :arthritis, label: 'Arthritis', collection: Patient.arthritis.keys
-            = f.input :asthma, label: 'Asthma', collection: Patient.asthmas.keys
-            = f.input :cancer, label: 'Cancer', collection: Patient.cancers.keys
-            = f.input :cystic_fibrosis, label: 'Cystic Fibrosis', collection: Patient.cystic_fibroses.keys
-            = f.input :chronic_obstructive_pulmonary_disease, label: 'Chronic Obstructive Pulmonary Disease', collection: Patient.chronic_obstructive_pulmonary_diseases.keys
-            = f.input :diabetes, label: 'Diabetes', collection: Patient.diabetes.keys
-            = f.input :epilepsy, label: 'Epilepsy', collection: Patient.epilepsies.keys
-            = f.input :heart_disease, label: 'Heart Disease', collection: Patient.heart_diseases.keys
-            = f.input :high_blood_pressure, label: 'High Blood Pressure', collection: Patient.high_blood_pressures.keys
-            = f.input :high_cholesterol, label: 'High Cholesterol', collection: Patient.high_cholesterols.keys
-            = f.input :hiv, label: 'HIV', collection: Patient.hivs.keys
-            = f.input :mental_health_condition, label: 'Mental Health Condition', collection: Patient.mental_health_conditions.keys
-            = f.input :multiple_scierosis, label: 'Multiple Scierosis', collection: Patient.multiple_scieroses.keys
-            = f.input :none, label: 'None', collection: Patient.nones.keys
-            = f.button :submit, class: "btn"
+  .form-group
+    = simple_form_for @patient do |f|
+      = f.input :age, label: 'Age'
+      = f.input :gender, label: 'Gender', collection: Patient.genders.keys
+      = f.input :employment_status, label: 'Employment Status', collection: Patient.employment_statuses.keys
+      = f.input :construction, label: 'Construction', collection: Patient.constructions.keys
+      = f.input :delivering_to_home, label: 'Delivering to Home', collection: Patient.delivering_to_homes.keys
+      = f.input :food_retail, label: 'Food Retail', collection: Patient.food_retails.keys
+      = f.input :healthcare, label: 'Healthcare', collection: Patient.healthcares.keys
+      = f.input :logistic, label: 'Logistic', collection: Patient.logistics.keys
+      = f.input :manufacturing, label: 'Manufacturing', collection: Patient.manufacturings.keys 
+      = f.input :policing_or_prison, label: 'Policing or Prison', collection: Patient.policing_or_prisons.keys
+      = f.input :public_transport, label: 'Public Transport', collection: Patient.public_transports.keys
+      = f.input :school, label: 'School', collection: Patient.schools.keys
+      = f.input :social_care, label: 'Social Care', collection: Patient.social_cares.keys
+      = f.input :not_working, label: 'Not Working', collection: Patient.not_workings.keys
+      = f.input :arthritis, label: 'Arthritis', collection: Patient.arthritis.keys  
+      = f.input :asthma, label: 'Asthma', collection: Patient.asthmas.keys
+      = f.input :cancer, label: 'Cancer', collection: Patient.cancers.keys
+      = f.input :cystic_fibrosis, label: 'Cystic Fibrosis', collection: Patient.cystic_fibroses.keys
+      = f.input :chronic_obstructive_pulmonary_disease, label: 'Chronic Obstructive Pulmonary Disease', collection: Patient.chronic_obstructive_pulmonary_diseases.keys
+      = f.input :diabetes, label: 'Diabetes', collection: Patient.diabetes.keys
+      = f.input :epilepsy, label: 'Epilepsy', collection: Patient.epilepsies.keys  
+      = f.input :heart_disease, label: 'Heart Disease', collection: Patient.heart_diseases.keys
+      = f.input :high_blood_pressure, label: 'High Blood Pressure', collection: Patient.high_blood_pressures.keys
+      = f.input :high_cholesterol, label: 'High Cholesterol', collection: Patient.high_cholesterols.keys
+      = f.input :hiv, label: 'HIV', collection: Patient.hivs.keys
+      = f.input :mental_health_condition, label: 'Mental Health Condition', collection: Patient.mental_health_conditions.keys
+      = f.input :multiple_scierosis, label: 'Multiple Scierosis', collection: Patient.multiple_scieroses.keys  
+      = f.input :none, label: 'None', collection: Patient.nones.keys
+      = f.button :submit, class: "btn btn-light btn-lg btn-block"
 
     css:
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+        }
 
-        .container {
-            padding-left: 30%;
-            align: center;
+        button, input {
+          width: 100%;
+          padding: 12px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+        }
+
+        label {
+            font-size: 15px;
+            padding-right: 10px;
+        }
+
+        .form-group {
+            padding: 2%;
+            color: white;
+            display: flex;
+            flex-flow: column wrap;
         }
 
         .col-form-label {
-            align: center;
             padding: 0.1%;
         }
 
-        .btn {
+        .btn-block {
             color: white;
             background: rgba(255,255,255,0.5);
             border-color: white;
+            text-align: center;
+            margin-top: 1%;    
+        }
+
+        .btn-block:hover {
+            background: rgba(0,0,0,0.1);
+            border-color: white;
+            color: white;
+        }
+
+        label {
+          align: right;
         }
