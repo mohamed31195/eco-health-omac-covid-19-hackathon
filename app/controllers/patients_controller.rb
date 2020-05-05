@@ -22,9 +22,22 @@ class PatientsController < ApplicationController
     render 'show'
   end
 
+  def download_csv
+    send_file(
+      "#{Rails.root}/app/assets/Example-Dataset.csv",
+      filename: "Example-Dataset.csv",
+      type: "application/csv"
+    )
+  end
+
   def import
-    Patient.my_import(params[:file])
-    redirect_to patients_file_import_path, notice: "Successfully Imported Data!"
+    if !params[:file].nil?
+      Patient.my_import(params[:file])
+      redirect_to patients_file_import_path, notice: "Successfully Imported Data!"
+    else
+      flash[:alert] = 'Please Insert File'
+      redirect_to patients_file_import_path
+    end
   end
 
   private

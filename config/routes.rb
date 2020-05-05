@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'patients/show'
 
+  get "patients/download_csv"
+
   get 'patients/new'
     
   get 'patients/import' => 'patients#my_import'
